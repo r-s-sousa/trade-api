@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\V1\TeamController;
+use App\Http\Controllers\Api\V1\ChampionshipController;
 
 Route::post('/login', [AuthController::class, 'login'])
     ->name('login');
@@ -22,4 +23,5 @@ Route::group([
     'middleware' => ['auth:sanctum']
 ], function () {
     Route::apiResource('teams', TeamController::class);
+    Route::apiResource('championships', ChampionshipController::class);
 });
