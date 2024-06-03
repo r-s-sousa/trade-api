@@ -15,5 +15,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
             'password' => 'password',
         ]);
+
+        $this->call([
+            TeamSeeder::class,
+        ]);
     }
 }
