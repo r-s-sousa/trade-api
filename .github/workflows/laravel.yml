@@ -33,4 +33,4 @@ jobs:
           DB_DATABASE: database/database.sqlite
         run: php artisan test --parallel
       - name: Execute static analysis via PHPStan
-        run: php artisan test --parallel
+        run: composer run phpstan
