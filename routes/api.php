@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\V1\TeamController;
 use App\Http\Controllers\Api\V1\ChampionshipController;
+use App\Http\Controllers\Api\V1\ChampionshipTeamController;
 
 Route::post('/login', [AuthController::class, 'login'])
     ->name('login');
@@ -24,4 +25,10 @@ Route::group([
 ], function () {
     Route::apiResource('teams', TeamController::class);
     Route::apiResource('championships', ChampionshipController::class);
+    Route::get('/championship-teams/{championship}/teams', [ChampionshipTeamController::class, 'index']);
+    Route::get('/championship-teams/{championshipTeam}', [ChampionshipTeamController::class, 'show']);
+    Route::post('/championship-teams', [ChampionshipTeamController::class, 'store']);
+    Route::post('/championship-teams/bulk', [ChampionshipTeamController::class, 'bulkStore']);
+    Route::match(['put', 'patch'], '/championship-teams/{championshipTeam}', [ChampionshipTeamController::class, 'update']);
+    Route::delete('/championship-teams/{championshipTeam}', [ChampionshipTeamController::class, 'destroy']);
 });
