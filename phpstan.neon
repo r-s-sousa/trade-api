@@ -1,0 +1,153 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    ignoreErrors:
+        -
+            message: "#^Access to an undefined property Laravel\\\\Sanctum\\\\Contracts\\\\HasAbilities\\:\\:\\$id\\.$#"
+            count: 2
+            path: app/Http/Controllers/Api/AuthController.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipResource\\:\\:\\$id\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipResource\\:\\:\\$id_created_by\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipResource\\:\\:\\$name\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipTeamResource\\:\\:\\$id\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipTeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipTeamResource\\:\\:\\$id_championship\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipTeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipTeamResource\\:\\:\\$id_team\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipTeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipTeamResource\\:\\:\\$team_points\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipTeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\ChampionshipTeamResource\\:\\:\\$team_ranking\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/ChampionshipTeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$id\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$id_championship\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$id_team_one\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$id_team_two\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$stage\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$team_one_goals\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\GameResource\\:\\:\\$team_two_goals\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/GameResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\TeamResource\\:\\:\\$id\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/TeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\TeamResource\\:\\:\\$name\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/TeamResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\UserResource\\:\\:\\$email\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/UserResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\UserResource\\:\\:\\$id\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/UserResource.php
+
+        -
+            message: "#^Access to an undefined property App\\\\Http\\\\Resources\\\\V1\\\\UserResource\\:\\:\\$name\\.$#"
+            count: 1
+            path: app/Http/Resources/V1/UserResource.php
+        -
+            message: "#^Relation 'teams' is not found in App\\\\Models\\\\Championship model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/ChampionshipController.php
+
+        -
+            message: "#^Relation 'user' is not found in App\\\\Models\\\\Championship model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/ChampionshipController.php
+
+        -
+            message: "#^Relation 'championship' is not found in App\\\\Models\\\\ChampionshipTeam model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/ChampionshipTeamController.php
+
+        -
+            message: "#^Relation 'team' is not found in App\\\\Models\\\\ChampionshipTeam model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/ChampionshipTeamController.php
+
+        -
+            message: "#^Relation 'championship' is not found in App\\\\Models\\\\Game model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/GameController.php
+        -
+            message: "#^Relation 'teamOne' is not found in App\\\\Models\\\\Game model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/GameController.php
+
+        -
+            message: "#^Relation 'teamTwo' is not found in App\\\\Models\\\\Game model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/GameController.php
+
+        -
+            message: "#^Relation 'championships' is not found in App\\\\Models\\\\Team model\\.$#"
+            count: 1
+            path: app/Http/Controllers/Api/V1/TeamController.php
+
+    paths:
+        - app/
+
+    level: 4
