@@ -23,4 +23,9 @@ class Championship extends Model
     {
         return $this->belongsToMany(Team::class, 'championship_teams', 'id_championship', 'id_team');
     }
+
+    public function games()
+    {
+        return $this->hasMany(Game::class, 'id_championship');
+    }
 }
