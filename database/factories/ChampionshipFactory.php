@@ -11,7 +11,7 @@ class ChampionshipFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'id_created_by' => User::factory(),
+            'id_created_by' => User::first(),
             'created_at' => $this->faker->dateTimeThisMonth(),
         ];
     }
