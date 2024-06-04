@@ -1,3 +1,5 @@
+[![Laravel](https://github.com/r-s-sousa/trade-api/actions/workflows/laravel.yml/badge.svg)](https://github.com/r-s-sousa/trade-api/actions/workflows/laravel.yml)
+
 # How Start
 
 This is an example of how to configure and start the server.
