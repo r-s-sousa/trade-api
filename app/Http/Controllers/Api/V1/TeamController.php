@@ -13,7 +13,7 @@ class TeamController extends Controller
 {
     public function index()
     {
-        $teams = Team::paginate();
+        $teams = Team::with('championships')->paginate();
         return TeamResource::collection($teams);
     }
 
@@ -24,6 +24,7 @@ class TeamController extends Controller
 
     public function show(Team $team)
     {
+        $team->load('championships');
         return new TeamResource($team);
     }
 

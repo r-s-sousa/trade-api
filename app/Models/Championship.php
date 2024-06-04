@@ -13,4 +13,14 @@ class Championship extends Model
         'name',
         'id_created_by',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_created_by');
+    }
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class, 'championship_teams', 'id_championship', 'id_team');
+    }
 }

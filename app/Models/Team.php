@@ -12,4 +12,9 @@ class Team extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function championships()
+    {
+        return $this->belongsToMany(Championship::class, 'championship_teams', 'id_team', 'id_championship');
+    }
 }

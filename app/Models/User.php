@@ -31,4 +31,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected function championship()
+    {
+        return $this->hasMany(Championship::class, 'id_created_by');
+    }
 }

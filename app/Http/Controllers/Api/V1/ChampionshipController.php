@@ -22,7 +22,10 @@ class ChampionshipController extends Controller
 
     public function index()
     {
-        $champions = Championship::where('id_created_by', $this->user->id)->paginate();
+        $champions = Championship::where('id_created_by', $this->user->id)
+            ->with(['user', 'teams'])
+            ->paginate();
+
         return ChampionshipResource::collection($champions);
     }
 
@@ -38,6 +41,8 @@ class ChampionshipController extends Controller
         if (!$this->isOwner($championship)) {
             return response()->json(['message' => 'You do not have permission to view this championship'], 403);
         }
+
+        $championship->load(['user', 'teams']);
 
         return new ChampionshipResource($championship);
     }

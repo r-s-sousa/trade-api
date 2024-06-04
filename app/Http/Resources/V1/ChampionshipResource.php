@@ -12,7 +12,9 @@ class ChampionshipResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'id_created_by' => $this->id_created_by
+            'id_created_by' => $this->id_created_by,
+            'user' => new UserResource($this->whenLoaded('user')),
+            'teams' => TeamResource::collection($this->whenLoaded('teams'))
         ];
     }
 }
