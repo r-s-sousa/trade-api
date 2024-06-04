@@ -57,3 +57,17 @@ Congratulations! You have successfully configured and started the server. Now go
 ### Postman
 
 Postman files can be found in the [trade-infra](https://github.com/r-s-sousa/trade-infra) /postman folder.
+
+**The files to import:**
+
+*Postman Collections:*
+
+- postman/Auth.postman_collection.json
+- postman/Championship-teams.postman_collection.json
+- postman/Championship.postman_collection.json
+- postman/Game.postman_collection.json
+- postman/Team.postman_collection.json
+
+*Postman Environments:*
+
+- postman/trade-environments.postman_environment.json
